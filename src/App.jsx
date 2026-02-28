@@ -8,7 +8,7 @@ import UserForm from './pages/UserForm'
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/React-Front-End' : '/'}>
       <Routes>
         <Route path='/login' element={<Login/>}/>
         <Route path='/users' element={<UserList/>}/>
